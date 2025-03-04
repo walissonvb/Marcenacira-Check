@@ -1,0 +1,357 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Check List Monatagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formCheck" (ngSubmit)="formPost()">
+    <div *ngIf="sections[0]">
+      <ion-item>
+        <ion-label position="floating">Cliente</ion-label>
+        <ion-input type="text" formControlName="cliente" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input type="text" formControlName="endereco" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ambiente</ion-label>
+        <ion-input type="text" formControlName="ambiente" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Móvel</ion-label>
+        <ion-input type="text" formControlName="movel" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="text" formControlName="telefone" autocomplete="tel" maxlength="15" minlength="10"
+          required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Proficional</ion-label>
+        <ion-input type="text" formControlName="montador" required></ion-input>
+      </ion-item>
+      <ion-button (click)="toggleSection(1)">Próxima Seção</ion-button>
+    </div>
+    <div *ngIf="sections[1]">
+      <p>Montagem</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Apresenta riscos ou batidas nas peças</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox [checked]="false"
+              (ionChange)="onCheckboxChange($event, 'riscos', 'Não Apresenta riscos ou batidas nas peças')">
+            </ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input formControlName="riscosObs" type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <p>Apresenta erros de furação</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ponto de esgoto: (Sifão, Vazamnetos... etc.)</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox [checked]="false"
+            (ionChange)="onCheckboxChange($event, 'esgoto', 'Nenhuma anomalia nos Ponto de esgoto: (Sifão, Vazamnetos... etc.')"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input formControlName="esgotoObs" type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ponto de Agua (verificar registro geral): Fechado/Aberto, vazamentos etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="Agua"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ponto de tomada: Acabamento, espelho, fixação, etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="tomada"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ponto de interrupitor: Acabamento, espelho, fixação, etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="interrupitor"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ponto de gás: Colocação de mangueiras e registros, etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="gas"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <p>Abertura de portas e gavetas</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Funcionalidades e fixação das dobradiças (colocar todos os parafusos).</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="dobradica"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Deslizamento das gavetas e gavetões</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="gaveta"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Funcionalidades das corrediças</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="corrediça"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Funcionalidades das basculas</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="basculas"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Funcionalidades dos pistãos</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="pistaos"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <p>Puxadores</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Funcionalidades dos pistãos</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="pistaos"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Acabamentos laterais e frestass</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="acabPorta"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <p>Portas de corres</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Deslizamento das portas</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="deslizamento"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Fechamento das portas (Ajuste dos esquadros)</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="fechamento"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Amortecedores, freios/limitadores</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="amortecedores"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Aberturas dos internos(gavetas, sapateiras, etc.)</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="gavGr"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Cabideiros</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="Cabideiros"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>União e nivelamento dos moveis</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="nivel"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-button (click)="toggleSection(0)">Seção Anterior</ion-button>
+      <ion-button (click)="toggleSection(2)">Próxima Seção</ion-button>
+    </div>
+    <div *ngIf="sections[2]">
+      <p>Acabamento</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Tamponamento</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="tamponamento"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Alinhamento com outros móveis</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="alinhaOutrmov"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Alinhamento com a pia</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="alinhaPia"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Alinhamento com molduras, ceramicas e etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="alinhaCera"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Parafusos aparentes</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="parafuso"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Capa de plastico cantoneira, tampinha CLP, etc</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="acabaPlast"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Acabamento com silicone ou PU</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="acabaPU"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Acabamento das fitas de bordas</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="acavFita"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Acabamento dos amários</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="acabArm"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Instalçao de leds, spots,fixação, embutir fontes.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="led"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-button (click)="toggleSection(1)">Seção Anterior</ion-button>
+      <ion-button (click)="toggleSection(3)">Próxima Seção</ion-button>
+    </div>
+    <div *ngIf="sections[3]">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>No móvel em geral(parte interna, prateleira, fundos, parte interna das
+            gavetas)</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="limpMove"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>restos de cola, silicone, etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="limpCola"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Etiquetas, restos de fita adesiva, etc.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="limpEtiq"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Marcação de lápis, caneta, canetões.</ion-card-title>
+          <ion-card-subtitle>
+            <ion-checkbox value="limpEtiq"></ion-checkbox>
+          </ion-card-subtitle>
+          <ion-input type="text" label="Observação"></ion-input>
+        </ion-card-header>
+      </ion-card>
+      <ion-button (click)="toggleSection(2)">Seção Anterior</ion-button>
+      <ion-button type="submit" expand="block">Enviar</ion-button>
+    </div>
+  </form>
+</ion-content>
