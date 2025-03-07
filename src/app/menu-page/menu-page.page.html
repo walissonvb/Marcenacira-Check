@@ -53,7 +53,7 @@
           <ion-card-title>Ponto de esgoto: (Sifão, Vazamnetos... etc.)</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'esgoto', 'Nenhuma anomalia nos Ponto de esgoto: (Sifão, Vazamnetos... etc.')"></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'esgoto', 'Nenhuma anomalia nos Ponto de esgoto: (Sifão, Vazamnetos... etc.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input formControlName="esgotoObs" type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -63,8 +63,8 @@
           <ion-card-title>Ponto de Agua (verificar registro geral): Fechado/Aberto, vazamentos etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'agua', 'Não Apresenta vazamento nos Ponto de Agua (Foi verificado registro geral Fechado/Aberto')">
-          </ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'agua', 'Não Apresenta vazamento nos Ponto de Agua (Foi verificado registro geral Fechado/Aberto')">
+            </ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -74,8 +74,8 @@
           <ion-card-title>Ponto de tomada: Acabamento, espelho, fixação, etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'tomada', 'Verificado os ponto de tomada (espelho, fixação, etc.')">
-          </ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'tomada', 'Verificado os ponto de tomada (espelho, fixação, etc.')">
+            </ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -85,8 +85,7 @@
           <ion-card-title>Ponto de interrupitor: Acabamento, espelho, fixação, etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'interrupitor', 'verificado os ponto de interrupitor (acabamento, espelho, fixação, etc.)')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'interrupitor', 'verificado os ponto de interrupitor (acabamento, espelho, fixação, etc.)')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -96,8 +95,7 @@
           <ion-card-title>Ponto de gás: Colocação de mangueiras e registros, etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'gas', 'Foi verificado ponto de gás: Colocação de mangueiras e registros, etc.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'gas', 'Foi verificado ponto de gás: Colocação de mangueiras e registros, etc.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -108,8 +106,8 @@
           <ion-card-title>Funcionalidades e fixação das dobradiças (colocar todos os parafusos).</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'dobra', 'Não Apresenta anomalia nas funcionalidades e fixação das dobradiças (foi colocado todos os parafusos)')".
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'dobra', 'Não Apresenta anomalia nas funcionalidades e fixação das dobradiças (foi colocado todos os parafusos)')"
+              .></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -119,8 +117,7 @@
           <ion-card-title>Deslizamento das gavetas e gavetões</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'gaveta', 'Testado o deslizamento das gavetas e gavetões')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'gaveta', 'Testado o deslizamento das gavetas e gavetões')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -130,8 +127,7 @@
           <ion-card-title>Funcionalidades das corrediças</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'corredica', 'Não Apresenta anomalias Funcionalidades das corrediças')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'corredica', 'Não Apresenta anomalias Funcionalidades das corrediças')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -141,8 +137,7 @@
           <ion-card-title>Funcionalidades das basculas</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'bascula', 'Testado as funcionalidades das basculas')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'bascula', 'Testado as funcionalidades das basculas')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -152,8 +147,7 @@
           <ion-card-title>Funcionalidades dos pistãos</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'pistao', 'Testado as funcionalidades dos pistãos')"
-             ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'pistao', 'Testado as funcionalidades dos pistãos')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -164,8 +158,7 @@
           <ion-card-title>Funcionalidades dos pistãos</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'riscos', 'Não Apresenta')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'riscos', 'Não Apresenta')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -175,8 +168,7 @@
           <ion-card-title>Acabamentos laterais e frestas</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'acabamento', 'Foi verificado acabamentos laterais e frestas')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'acabamento', 'Foi verificado acabamentos laterais e frestas')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -187,8 +179,7 @@
           <ion-card-title>Deslizamento das portas</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'Deslizamento', 'Verificado o deslizamento das portas')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'Deslizamento', 'Verificado o deslizamento das portas')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -198,8 +189,7 @@
           <ion-card-title>Fechamento das portas (Ajuste dos esquadros)</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'fechamento', 'Conferido fechamento das portas (Ajuste dos esquadros)')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'fechamento', 'Conferido fechamento das portas (Ajuste dos esquadros)')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -209,8 +199,7 @@
           <ion-card-title>Amortecedores, freios/limitadores</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'amortecedore', 'Não Apresenta anomalias Amortecedores, freios/limitadores')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'amortecedore', 'Não Apresenta anomalias Amortecedores, freios/limitadores')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -220,8 +209,7 @@
           <ion-card-title>Aberturas dos internos(gavetas, sapateiras, etc.)</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'interno', 'Verificado aberturas dos internos(gavetas, sapateiras, etc.)')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'interno', 'Verificado aberturas dos internos(gavetas, sapateiras, etc.)')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -231,8 +219,7 @@
           <ion-card-title>Cabideiros</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'cabideiro', 'Verificado os Cabideiros')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'cabideiro', 'Verificado os Cabideiros')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -242,8 +229,7 @@
           <ion-card-title>União e nivelamento dos móveis</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'nivelamento', 'Foi verificado nião e nivelamento dos moveis')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'nivelamento', 'Foi verificado nião e nivelamento dos moveis')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -258,8 +244,7 @@
           <ion-card-title>Tamponamento</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'tamponamento', 'Foi verificado o acbamendo dos Tamponamentos')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'tamponamento', 'Foi verificado o acbamendo dos Tamponamentos')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -269,8 +254,7 @@
           <ion-card-title>Alinhamento com outros móveis</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'alinhaMovei[l]', 'Foi verificado o alinhamento com outros móveis')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'alinhaMovei[l]', 'Foi verificado o alinhamento com outros móveis')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -280,8 +264,7 @@
           <ion-card-title>Alinhamento com a pia</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'AlinhaPia', 'Verificado alinhamento com a pia')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'AlinhaPia', 'Verificado alinhamento com a pia')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -291,8 +274,7 @@
           <ion-card-title>Alinhamento com molduras, ceramicas e etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'alinhaMol', 'Verificado alinhamento com molduras, ceramicas e etc.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'alinhaMol', 'Verificado alinhamento com molduras, ceramicas e etc.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -302,8 +284,7 @@
           <ion-card-title>Parafusos aparentes</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'Parafuso', 'Não Apresenta parafusos aparentes')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'Parafuso', 'Não Apresenta parafusos aparentes')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -313,8 +294,7 @@
           <ion-card-title>Capa de plastico cantoneira, tampinha CLP, etc</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'acabPlast', 'Instalado todas as Capa de plastico cantoneira, tampinha CLP, etc')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'acabPlast', 'Instalado todas as Capa de plastico cantoneira, tampinha CLP, etc')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -324,8 +304,7 @@
           <ion-card-title>Acabamento com silicone ou PU</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'acabPU', 'Feito acabamento com silicone ou PU')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'acabPU', 'Feito acabamento com silicone ou PU')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -335,8 +314,7 @@
           <ion-card-title>Acabamento das fitas de bordas</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'acabBord', 'Conferido os acabamento das fitas de bordas')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'acabBord', 'Conferido os acabamento das fitas de bordas')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -346,8 +324,7 @@
           <ion-card-title>Acabamento dos amários</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'acabArm', 'Conferidos os acabamento dos amários')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'acabArm', 'Conferidos os acabamento dos amários')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -357,8 +334,7 @@
           <ion-card-title>Instalçao de leds, spots,fixação, embutir fontes.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'led', 'Não Apresenta anormalidades nas instalçao de leds, spots,fixação, embutir fontes.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'led', 'Não Apresenta anormalidades nas instalçao de leds, spots,fixação, embutir fontes.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -373,10 +349,8 @@
           <ion-card-title>No móvel em geral(parte interna, prateleira, fundos, parte interna das
             gavetas)</ion-card-title>
           <ion-card-subtitle>
-            <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'limpGeral', 'Feito a limpeza No móvel em geral(parte interna, prateleira, fundos, parte interna das
-            gavetas)')"
-            ></ion-checkbox>
+            <ion-checkbox [checked]="false" (ionChange)="onCheckboxChange($event, 'limpGeral', 'Feito a limpeza No móvel em geral(parte interna, prateleira, fundos, parte interna das
+            gavetas)')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -386,8 +360,7 @@
           <ion-card-title>restos de cola, silicone, etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'cola', 'Não Apresenta restos de cola, silicone, etc.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'cola', 'Não Apresenta restos de cola, silicone, etc.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -397,8 +370,7 @@
           <ion-card-title>Etiquetas, restos de fita adesiva, etc.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'etiqueta', 'Não Apresenta etiquetas, restos de fita adesiva, etc.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'etiqueta', 'Não Apresenta etiquetas, restos de fita adesiva, etc.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
@@ -408,8 +380,7 @@
           <ion-card-title>Marcação de lápis, caneta, canetões.</ion-card-title>
           <ion-card-subtitle>
             <ion-checkbox [checked]="false"
-            (ionChange)="onCheckboxChange($event, 'marcacoes', 'Não Apresenta marcação de lápis, caneta, canetões.')"
-            ></ion-checkbox>
+              (ionChange)="onCheckboxChange($event, 'marcacoes', 'Não Apresenta marcação de lápis, caneta, canetões.')"></ion-checkbox>
           </ion-card-subtitle>
           <ion-input type="text" label="Observação"></ion-input>
         </ion-card-header>
