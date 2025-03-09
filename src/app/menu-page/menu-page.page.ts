@@ -2,20 +2,43 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule,FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonButton, IonSelect, IonSelectOption, IonCheckbox, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from '@ionic/angular/standalone';
-
+import { FirebaseApp } from '../firebase.config';
+import { RelatorService } from '../servico/relator.service';
 @Component({
   selector: 'app-menu-page',
   templateUrl: './menu-page.page.html',
   styleUrls: ['./menu-page.page.scss'],
   standalone: true,
-  imports: [ IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonCheckbox,  IonButton,  IonLabel, IonItem, IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule,ReactiveFormsModule, FormsModule]
+  imports: [
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCardHeader,
+    IonCard,
+    IonCheckbox,
+    IonButton,
+    IonLabel,
+    IonItem,
+    IonInput,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+
+  ]
 })
 export class MenuPagePage implements OnInit {
   formCheck: FormGroup;
   sections: boolean[] = [true, false, false, false, false];
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private relatorService: RelatorService,
+
+  ) {
     this.formCheck = this.fb.group({
       cliente: ['', [Validators.required]],
       endereco: ['', [Validators.required]],
@@ -32,7 +55,9 @@ export class MenuPagePage implements OnInit {
    }
 
   ngOnInit() {
-
+    console.log('Firebase App Inicializado:', FirebaseApp);
+    this.relatorService.testFirestore();
+    console.log(this.relatorService)
   }
 
 
